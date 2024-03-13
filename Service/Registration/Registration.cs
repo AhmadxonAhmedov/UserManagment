@@ -6,7 +6,6 @@ namespace LoginPj.Service.Registration;
 
 internal class Registration : IRegistration
 {
-    
         private readonly ILogBroker logBroker;
 
     public Registration()
@@ -15,7 +14,6 @@ internal class Registration : IRegistration
     }
     public Credentials AddCredential(Credentials credential)
     {
-
         if(credential is null)
         {
            return CreateAndLogInvalidCredential();
@@ -23,9 +21,7 @@ internal class Registration : IRegistration
         else
         {
             return ValidateAndAddCredential(credential);
-        }
-
-        
+        }    
     }
 
     private Credentials CreateAndLogInvalidCredential()
