@@ -1,6 +1,4 @@
 ﻿using LoginPj.Model;
-
-
 namespace LoginPj.Brokers;
 
 internal class LogBroker : ILogBroker
@@ -14,14 +12,10 @@ internal class LogBroker : ILogBroker
 
     private Credentials[] credentials =
     {
-
     };
     Credentials[] ILogBroker.ViewAllCredtinals() 
         => credentials;
     
-    
-
-
     public Credentials AddCredential(Credentials credential)
     {
         string credentialLine = $"{credential.Username}*{credential.Password}\n";
@@ -38,7 +32,5 @@ internal class LogBroker : ILogBroker
         {
             File.Create(path).Close();
         }
-    }
-
-   
+    }   
 }
